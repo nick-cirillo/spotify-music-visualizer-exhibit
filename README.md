@@ -15,7 +15,8 @@ For a smooth experience, the visualizer operates not off preset tracks but from 
 I use a pared down version of my integration fork that exclusively collects the track's `Energy`, `Tempo`, and `Valence` (whether the track evokes "positive" [happy, content, celebratory] or "negative" [sad, angry, paranoid] feelings). I use these traits to influence the music visualization, which I'll describe below.
 
 # TouchDesigner Visualization
-![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/f08064fa-08d3-44f2-b026-5579409e1dc2)
+![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/f8b3cc93-cdc4-482c-b88f-abb6d37aea22)
+
 > Here's the structure of the visualization. I suggest following along with the text below!
 ## 3D Geometry
 I begin with a Sphere SOP (Surface Operator), a 3D model of a sphere. In TouchDesigner, Operators are items that can link to other items and influence each other - they vary widely in function and form.
@@ -47,4 +48,31 @@ I also found that some visualizations were simply too large for the screen! I lo
 Now that all the visuals are in place, I sent the Noise SOP to a Render SOP, which also takes a camera, allowing me to view the shape in a Window COMP (Component). First, though, I take the Render SOP and overlay it onto our background Comp SOP in a new, third Comp SOP. I send this final composition to a Window COMP, and mark this as the performance window, so that when I enter performance mode, it will display the visualization in fullscreen (after adjusting a few parameters).
 
 # Examples
-Examples to come!
+![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/8fe68307-08fd-431a-b001-8f39af150ab6)
+> Here's what it looks like when nothing is playing. Ominous.
+
+<img width="1920" alt="6rsdlSg2dH" src="https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/46043c0b-512d-4390-95fa-2ef6f9e1b0c1">
+
+> Here's [Lovers Rock](https://open.spotify.com/track/6dBUzqjtbnIa1TwYbyw5CM?si=69285c1ed6e6434e) by TV Girl. The visualization returns to the basic sphere often, and feels like it's trying to break out of a shell, which fits the song nicely.
+
+![scCQ5Bw0Ju](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/e3d6c02f-b311-4501-a286-8a0e1374206f)
+> This is [Symphony No. 10 in E Minor, Op. 93: II. Allegro](https://open.spotify.com/track/6oPWvsZ7dDafTPhi2kBJnG?si=eadc2a8b50f84717) by Dmitri Shostakovich, performed by the Royal Scottish National Orchestra. In this visualization, the sphere silhouette remains visible at all times, but the jagged edges protrude out and remain for a few seconds before retracting, highlighting the dynamic of alternating restraint and attack the piece has.
+
+<img width="1920" alt="fC1VM8ldnl" src="https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/b71244e5-c64b-44df-bad6-7750e23ab02c">
+> Here is [Shanghai](https://open.spotify.com/track/6HlWKkzNE1WP67OGqtGeBW?si=29b1c1cf4b654e9f) by King Gizzard and the Wizard Lizard. It's an infectious, cheery, bubbly track, and the visualization matches this - big bubbles appear from nowhere, sometimes jumping right at you, never going exactly where you expect - and disappearing in an instant!
+
+![Hsi76fLtMq](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/26819f3e-18b6-4311-9b1b-524fd0d9b69a)
+> Now for [Black Paint](https://open.spotify.com/track/2yY0LXGpN7U2y5tbagNnXq?si=0fe5ca7b4f574166) by Death Grips. It's an ugly mess of giant crystalline spikes, one of which jumps at you with the gross mouth on the original album art. It's spontaneous and harsh, much like the song, and the spikes will assault you unexpectedly - much like the music does.
+
+![RAaKvQ1F3M](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/4055cf35-884a-4650-9e30-d990a7795c11)
+> [Strawberry Fields](https://open.spotify.com/track/3Am0IbOxmvlSXro7N5iSfZ?si=f5e79963d32f4259) by The Beatles lands somewhere between Shanghai and Lovers Rock, but with an added jagged edge to the bubbles. It's more random and willing to take risks than Lovers Rock, but never as unreservedly bubbly as Shanghai - but what it is is undulating and colorful, trippy, just like the source material.
+
+![SO344Ue0n5](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/388be108-0450-43d7-b729-afc47a3a4926)
+> The spikiest one yet, [BFG Division](https://open.spotify.com/track/4COR2ZPEyUn0lsbAouRWxA?si=c55e25c7fea340a3) by Mick Gordon is violent, harsh, and unrelenting. It's not as gross as Black Paint, but it is more violent and angry. Therefore, more spikes, faster spikes, and spikier spikes! This is the most fitting one so far.
+
+![ODSvTZStUg](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/41d9f1ef-a1a1-4a40-87ac-1bbbed9d47cb)
+> [Nude](https://open.spotify.com/track/35YyxFpE0ZTOoqFx5bADW8?si=2cccfd1ad2d54250) by Radiohead has a cynical edge to it, with those crystalline spikes, but they aren't moving so fast, and aren't willing to go so far. In motion, they're shaking and cowering back into the sphere. It's a much more reserved song, but still has a bite. And the colors are beautiful!
+
+![i5zpJl7lbX](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/932fc102-b3d1-40e1-8c99-ee3d51938d80)
+> [RETURN OF EBIC: RISE OF THE RED MIST](https://open.spotify.com/track/6CgYe6LUAT3BmQuz7eqKI3?si=375ef4a68ea64832) by d-d-d-dit. This one is about as bizarre as the source material.
+
