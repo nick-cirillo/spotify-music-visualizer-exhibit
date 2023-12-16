@@ -1,13 +1,16 @@
 # spotify-music-visualizer-exhibit
 A music visualizer made in TouchDesigner that uses a custom Python integration with Spotify. 
 
+[![Demo Video](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/573deef6-3940-41ec-b5a1-b0bdf9586b12)](https://www.youtube.com/watch?v=jmo1LZdjwf0)
+> Please check out this demo video!
+
 # Setup
 Download the .toe file and open it in TouchDesigner. Then, [download the .tox file from my fork of this Python Spotify API integration](https://github.com/nick-cirillo/Banana_CurrentlyPlaying_Plus_AudioFeatures), drag that file into the project, and follow the setup instructions from that repository. It should be plug-and-play from there, but consider changing the `Period` parameter inside the `beat1` CHOP (Channel Operator) in the `BANANA_CURRENTLYPLAYING` extension to 4 or even 2 so that the visualizer updates faster. Also inspect the `window1` COMP in the main project area to make sure it goes fullscreen - try playing with some parameters here if not.
 
 # Spotify API Integration
 For a smooth experience, the visualizer operates not off preset tracks but from Spotify. To integrate Spotify with TouchDesigner, I found a [repository by jetXS](https://github.com/jetXS/Banana_CurrentlyPlaying) that links TouchDesigner with your Spotify account and submits an API request at intervals to retrieve the currently playing track. I [forked this repository and extended the functionality](https://github.com/nick-cirillo/Banana_CurrentlyPlaying_Plus_AudioFeatures) to also collect the track ID, and use this to submit another API request for the "Audio Features" of the track, provided by Spotify. These features detail different aspects of a song - a full list is available [here]([https://developer.spotify.com/documentation/web-api/reference/get-information-about-the-users-current-playback](https://developer.spotify.com/documentation/web-api/reference/get-audio-features)).
 
-![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/2d9422a8-dd69-4955-a943-a8e7a819e6f8)
+![Integration TouchDesigner Structure](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/2d9422a8-dd69-4955-a943-a8e7a819e6f8)
 > The structure of the Spotify API Integration.
 
 
@@ -15,7 +18,7 @@ For a smooth experience, the visualizer operates not off preset tracks but from 
 I use a pared down version of my integration fork that exclusively collects the track's `Energy`, `Tempo`, and `Valence` (whether the track evokes "positive" [happy, content, celebratory] or "negative" [sad, angry, paranoid] feelings). I use these traits to influence the music visualization, which I'll describe below.
 
 # TouchDesigner Visualization
-![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/f8b3cc93-cdc4-482c-b88f-abb6d37aea22)
+![Visualization TouchDesigner Structure](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/f8b3cc93-cdc4-482c-b88f-abb6d37aea22)
 
 > Here's the structure of the visualization. I suggest following along with the text below!
 ## 3D Geometry
@@ -48,7 +51,7 @@ I also found that some visualizations were simply too large for the screen! I lo
 Now that all the visuals are in place, I sent the Noise SOP to a Render SOP, which also takes a camera, allowing me to view the shape in a Window COMP (Component). First, though, I take the Render SOP and overlay it onto our background Comp SOP in a new, third Comp SOP. I send this final composition to a Window COMP, and mark this as the performance window, so that when I enter performance mode, it will display the visualization in fullscreen (after adjusting a few parameters).
 
 # Examples
-![image](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/8fe68307-08fd-431a-b001-8f39af150ab6)
+![Nothing PLaying](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/8fe68307-08fd-431a-b001-8f39af150ab6)
 > Here's what it looks like when nothing is playing. Ominous.
 
 <img width="1920" alt="6rsdlSg2dH" src="https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/46043c0b-512d-4390-95fa-2ef6f9e1b0c1">
