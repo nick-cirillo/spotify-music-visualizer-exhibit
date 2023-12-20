@@ -1,6 +1,7 @@
 # spotify-music-visualizer-exhibit
 A music visualizer made in TouchDesigner that uses a custom Python integration with Spotify. 
 
+# Demo Video
 [![Demo Video](https://github.com/nick-cirillo/spotify-music-visualizer-exhibit/assets/77818146/573deef6-3940-41ec-b5a1-b0bdf9586b12)](https://www.youtube.com/watch?v=jmo1LZdjwf0)
 > Please check out this demo video!
 
